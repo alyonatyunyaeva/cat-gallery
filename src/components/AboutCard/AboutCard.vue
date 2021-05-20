@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-row class="d-flex ma-12">
-      <v-col cols="8">
-        <v-card class="pa-12">
-          <v-card-title>
+    <v-row class="ma-md-12 ma-xs-2">
+      <v-col cols="md-8">
+        <v-card class="pa-md-12 pa-xs-2">
+          <v-card-title class="text-body-2 text-md-h6">
             <slot name="title"></slot>
           </v-card-title>
           <v-spacer></v-spacer>
@@ -17,11 +17,7 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style></style>

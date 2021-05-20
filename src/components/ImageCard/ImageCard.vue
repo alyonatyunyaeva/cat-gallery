@@ -1,10 +1,10 @@
 <template>
-  <v-card elevation="0" class="ma-14" color="blue-grey lighten-5">
+  <v-card elevation="0" class="ma-xs-2 ma-md-14" color="blue-grey lighten-5" max-width="500">
     <v-carousel
       show-arrows-on-hover
       hide-delimiter-background
       delimiter-icon="mdi-minus"
-      height="300"
+      height="400"
     >
       <div v-for="picture in gallery" :key="picture.id">
         <v-hover v-model="hover">
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   props:{
@@ -40,7 +40,7 @@ export default {
       setCurrentPic: 'gallery/setCurrentPic',
     }),
     handleOnClick(picture){
-      this.$router.push({name: 'details'});
+      this.$router.push({name: 'details',  params:{ pictureId: picture.id}});
       this.setCurrentPic(picture);
     },
   },
